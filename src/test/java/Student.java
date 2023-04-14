@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
 public class Student {
-    String name;
-    long id;
+    private String name;
+    private long id;
 
-    ArrayList<Integer> gradeLists;
+    private ArrayList<Integer> gradeLists;
 
     public Student(String name, int id) {
         this.name = name;
@@ -41,5 +41,6 @@ public class Student {
         }
         double average = sum / gradeLists.size();
         return average;
+
     }
 }
