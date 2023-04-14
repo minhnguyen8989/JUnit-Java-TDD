@@ -9,6 +9,7 @@ public class Student {
     public Student(String name, long id) {
         this.name = name;
         this.id = id;
+        this.gradeLists = new ArrayList<Integer>();
     }
 
     // returns the student's id
@@ -41,4 +42,17 @@ public class Student {
         return average;
 
     }
+
+    public void updateGrade(int index, int newGrade) {
+        if (index >= 0 && index < this.gradeLists.size()){
+            this.gradeLists.set(index, newGrade);
+        }
+    }
+
+    public void deleteGrade(int index){
+        if (index >= 0 && index < this.gradeLists.size()){
+            this.gradeLists.remove(index);
+        }
+    }
+
 }
